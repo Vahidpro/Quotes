@@ -39,7 +39,7 @@ export async function getSingleQuote(quoteId) {
 	return loadedQuote;
 }
 
-export default async function addQuote(quoteData) {
+export async function addQuote(quoteData) {
 	const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
 		method: "POST",
 		body: JSON.stringify(quoteData),
